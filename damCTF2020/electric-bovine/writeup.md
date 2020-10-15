@@ -256,6 +256,8 @@ So what the base information is?It's an array of the name of the role/user and i
 But,i noticed a bug,the output of the bot(e.g the fiasco at the start of the previous section) used `author.name` while the `author/authorizer_credentials` array used author.nick,where `author.name` corresponds to the real discord username of author,and `author.nick` to it's discord nickname!
 
 By setting your discord nickname to `private`,the name of the role,we can fool the `authenticate` function into outputing True(which was discovered by josefk)
+
+
 ![](https://i.ibb.co/kXsMvxP/upload-efc94635c945442f866ba4fc8abf7619.png)
 > Note: to get the role id of private role on the remote discord server,we used discord developer mode, right click on role
 > ![](https://i.ibb.co/GJfpCRC/Screenshot-from-2020-10-15-15-13-30.png)
