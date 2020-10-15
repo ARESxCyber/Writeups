@@ -1,5 +1,5 @@
 # misc - electric-bovine 
-![](https://codimd.s3.shivering-isles.com/demo/uploads/upload_43146d63a13ab237450a54486d95442b.png)
+![](https://i.ibb.co/Wpgjy28/upload-43146d63a13ab237450a54486d95442b.png)
 
 ## The start of the story - josefk
 
@@ -187,8 +187,10 @@ Why isnt this going through? Since this bot is running locally, we can edit its 
 ![](https://i.ibb.co/qmmhG1M/Screenshot-from-2020-10-15-15-26-27.png)
 ### The fiasco
 But after that message we got this
+
 ![](https://i.ibb.co/Bqqb4qJ/upload-50e5a3e1e1ec1dfa5c3b8c592cbb0507.png)
-Soon after that we discovered the par in the code where everything fails: the `authenticate` function.
+
+Soon after that we discovered the part in the code where everything fails: the `authenticate` function.
 ```python=
 def authenticate(author, authorizer, role):
 
@@ -225,8 +227,11 @@ def authenticate(author, authorizer, role):
 ### Exploring the source code
 I first started looking at what are the arguments passed to the function, specifically `author, authorizer, role`
 I quickly found that 
+
 `author == Member object of the person to which to add the role`
+
 `authorizer == User object of the same person`
+
 `role == Role object of the role to add`
 
 After which i was able to look at the end result of what the function returned
@@ -243,6 +248,7 @@ permset = list(
     )
 ```
 One element must be same in all three sets
+
 To elaborate on the `author/authorizer_credentials` and `role_information` they're are an array consisting of base information of their objects.
 
 By some debugging we discovered that `author_credentials` and `authorizer_credentials` where equal
