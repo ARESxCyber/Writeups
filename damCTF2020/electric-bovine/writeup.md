@@ -177,6 +177,8 @@ role = message.guild.get_role(int(args[1][3:-1]))
 That looks very connected, it strips the special characters from the beginning and from the end to get the integer representation of the ID. Great
 
 We tried many variants of sending this ID to the client, most of which failed, as you for example could not see the role tagged,since it showed up as @deleted-role,but it was actually the correct solution.
+
+
 ![](https://i.ibb.co/F7LQN1g/Screenshot-from-2020-10-15-15-07-22.png)
 
 
@@ -271,6 +273,7 @@ So we can only use letters, `<` and `>`.
 After some fiddling around on my local terminal we found that you can pass file to cowsay by just `cowsay <file` without the need have spaces, cat the file etc.
 
 So we thought that the flag is probably stored in the same place with the bot,so we used `!cowsay <flag` and got the flag!
+
 
 ![](https://codimd.s3.shivering-isles.com/demo/uploads/upload_6834c2efc294ccc3587eaedc7a169959.png)
 
