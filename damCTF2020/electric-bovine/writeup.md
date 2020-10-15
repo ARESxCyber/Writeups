@@ -187,7 +187,7 @@ Why isnt this going through? Since this bot is running locally, we can edit its 
 ![](https://i.ibb.co/qmmhG1M/Screenshot-from-2020-10-15-15-26-27.png)
 ### The fiasco
 But after that message we got this
-![](https://codimd.s3.shivering-isles.com/demo/uploads/upload_50e5a3e1e1ec1dfa5c3b8c592cbb0507.png)
+![](https://i.ibb.co/Bqqb4qJ/upload-50e5a3e1e1ec1dfa5c3b8c592cbb0507.png)
 Soon after that we discovered the par in the code where everything fails: the `authenticate` function.
 ```python=
 def authenticate(author, authorizer, role):
@@ -256,7 +256,7 @@ So what the base information is?It's an array of the name of the role/user and i
 But,i noticed a bug,the output of the bot(e.g the fiasco at the start of the previous section) used `author.name` while the `author/authorizer_credentials` array used author.nick,where `author.name` corresponds to the real discord username of author,and `author.nick` to it's discord nickname!
 
 By setting your discord nickname to `private`,the name of the role,we can fool the `authenticate` function into outputing True(which was discovered by josefk)
-![](https://codimd.s3.shivering-isles.com/demo/uploads/upload_efc94635c945442f866ba4fc8abf7619.png)
+![](https://i.ibb.co/kXsMvxP/upload-efc94635c945442f866ba4fc8abf7619.png)
 > Note: to get the role id of private role on the remote discord server,we used discord developer mode, right click on role
 > ![](https://i.ibb.co/GJfpCRC/Screenshot-from-2020-10-15-15-13-30.png)
 
@@ -275,7 +275,7 @@ After some fiddling around on my local terminal we found that you can pass file 
 So we thought that the flag is probably stored in the same place with the bot,so we used `!cowsay <flag` and got the flag!
 
 
-![](https://codimd.s3.shivering-isles.com/demo/uploads/upload_6834c2efc294ccc3587eaedc7a169959.png)
+![](https://i.ibb.co/k413mQg/upload-6834c2efc294ccc3587eaedc7a169959.png)
 
 
 
